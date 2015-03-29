@@ -1,0 +1,20 @@
+{
+"base": "http://static.15thdoverscouts.org.uk/images/",
+"width": 740,
+"height": 750,
+"parallax_layers": [
+{"src": "banner_404_bg.png", "z": 0, "x": 0, "y": 0},
+{"src": "banner_404_tower.png", "z": 40, "x": 657.448, "y": 205.042},
+{"src": "banner_404_hill.png", "z": 0, "x": -0.383, "y": -3.043},
+{"src": "banner_404_canoeist.png", "z": 30, "x": 15.573, "y": 169.775},
+{"src": "banner_404_tents.png", "z": 30, "x": 269.442, "y": 164.702},
+{"src": "banner_404_flag.png", "z": 24, "x": 306.385, "y": 155.218},
+{"src": "banner_404_archery.png", "z": 20, "x": 484.656, "y": 131.305},
+{"src": "banner_404_walkers.png", "z": 10, "x": 466.731, "y": 14.252},
+{"src": "banner_404_cyclists.png", "z": 0, "x": -1.046, "y": -2.286},
+{"src": "banner_404_cloud.png", "z": 0, "x": 1.423, "y": 703.587},
+{"src": "banner_404_logo.png", "z": 0, "x": 553.910, "y": 584.809},
+{"src": "banner_404_textbody.png", "z": 10, "x": 18.194, "y": 229.906},
+{"src": "banner_404_textheading.png", "z": 15, "x": 17.082, "y": 582.848},
+{"src": "banner_404_leaves.png", "z": -15, "x": 562.642, "y": -72.719}
+]}

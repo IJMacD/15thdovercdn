@@ -1,0 +1,97 @@
+body, p, .body, .box .body p, table.con td, table.con td a {  font-family: Geneva, Arial, Helvetica, san-serif; font-size: 12pt; line-height: 16px; color: #FFFF33; }
+
+body { background-color: #F6F6F6; }
+
+div#page { background-color: #9CC718;  /* border-left: #FFFF00 solid 1px; border-right: #FFFF00 solid 1px; border-bottom: #FFFF00 solid 1px;*/ }
+
+h1 {  font-family: Geneva, Arial, Helvetica, san-serif; font-size: 16pt; line-height: 20px; color: #4E2A78; font-weight: bold;}
+h2 {  font-family: Geneva, Arial, Helvetica, san-serif; font-size: 14pt; line-height: 18px; color: #4E2A78; font-weight: bold;}
+h3, .hd {  font-family: Geneva, Arial, Helvetica, san-serif; font-size: 10pt; line-height: 15px; color: #4E2A78; font-weight: bold; margin-top: 5px; margin-bottom: 10px;}     
+.he, .he a, .newsbox .he a {  font-family: Geneva, Arial, Helvetica, san-serif; font-size: 8pt; line-height: 10px; color: #4E2A78; font-weight: bold;}
+.hf, .hf a {  font-family: Geneva, Arial, Helvetica, san-serif; font-size: 8pt; line-height: 10px; color: #333333;}
+
+a { font-family: Geneva, Arial, Helvetica, san-serif; font-size: 12pt; line-height: 16px; color: #FFFF33; text-decoration: underline; border: 0px; }
+a:hover { color: #FF0000}
+a img { border: 0px; }
+
+input {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px}
+textarea {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px}
+select {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px}
+
+input.bigtext { width: 544px; height: 30px; font-size: 18px; }
+
+/*.content_table, .content_table td {border: 1px solid #FFFF33; } */
+
+.shiny_table td, .shiny_table th, .shiny_btn { background-image: url(http://static.15thdoverscouts.org.uk/images/back_grad.png); background-repeat: repeat-x; background-color: #C0C0C0; color: #333333; font-size: 12px; border: 2px solid #C0C0C0; text-decoration: none; }/* #C0C0C0 */
+.shiny_table a { color: #333333; font-size: 12px; text-decoration: none; }
+/*.forum_table tr { padding-bottom: 20px; } */
+                                                                                                                                                                                                                                                  
+.shiny_table .high td, .shiny_table td.high, a.shiny_btn.high, input.shiny_btn.high { background-image: url(http://static.15thdoverscouts.org.uk/images/back_grad_yellow.png); background-repeat: repeat-x; background-color: #FFFF00; border: 2px solid #FFFF00; text-decoration: none; } /* #FFBD09 */
+.shiny_table .blue td, .shiny_table td.blue, a.shiny_btn.blue, input.shiny_btn.blue { background-image: url(http://static.15thdoverscouts.org.uk/images/back_grad_blue.png); background-repeat: repeat-x; background-color: #6480FF; border: 2px solid #6480FF; text-decoration: none; }
+
+.shiny_btn, a.shiny_btn, input.shiny_btn { width: 80px; height: 40px; display:block; text-align:center; vertical-align: middle; font-size: 14px; font-weight: bold; text-decoration: none; }
+
+#headlines { width: 260px; }                                                                                                                                      
+#headlines td, #headlines td a { font-family: Geneva, Arial, Helvetica, san-serif; font-size: 8pt; line-height: 16px; color: #FFFF33; }
+#headlines .box td, #headlines .box td a { font-family: Geneva, Arial, Helvetica, san-serif; font-size: 8pt; line-height: 16px; color: #000000; }   
+
+table.loginbox td, table td.loginbox, .loginbox {  text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 14px; color: #DCDCCA; background-color: #003366; }
+table td.loginbox h1{  font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; color: #DCDCCA; }
+
+table td.login, table td.login a { font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; background-color: #4E2A78; }
+table td a.loginhref { text-decoration: none; }
+
+.foot { text-align:center; font-size: 8pt; line-height: 10px; }
+
+.error, .dud, .warn {  color: #CC3300; }
+
+/*.changed td, .changed td a { background-color :#DDFFAA; color:#333333; }*/
+
+/*.boxleft{ margin: 10px 0px 10px 0px; border:1px solid #cccccc; color: #000000; width: 158px; padding: 10px; vertical-align: top; background-color: #EEEEEE; } */                                                    
+.box, .TB, .SB{ padding: 5px; margin: 5px; border:1px solid #cccccc; font-family: Geneva, Arial, Helvetica, san-serif; font-size: 11px; line-height: 14px; color: #000000; vertical-align: top; background-color: #EEEEEE; }
+.box p{ font-family: Geneva, Arial, Helvetica, san-serif; font-size: 11px; line-height: 14px; color: #000000; }
+.box a{ font-size: 11px; line-height: 14px; color: #0033FF; }
+
+.newsbox{ }
+.newsbox p, .newsbox a {font-family: Geneva, Arial, Helvetica, san-serif; font-size: 14px; line-height: 16px; color: #333333; text-decoration: none;}
+.newsbox a { text-decoration: underline; }
+
+.tabs{ border-left:1px solid #003300; border-right:1px solid #003300; border-top:1px solid #003300; background-color: #9CC718; line-height: 14px;  font-size: 11px; position: relative; top: -14px; margin: 2px; padding: 2px 4px 0px 4px; text-align: center; font-family: Arial, sans-serif; }
+.tabs a { color: #FFFFFF; font-size: 11px; line-height: 14px; }
+
+ul.menu { text-align: center; width: 146px; padding-left: 5px;}
+ul.menu a { display:block; width: 146px; height: 24px; padding-top: 12px; font: bold 13px sans-serif; color: #FFFFFF; background: url("http://static.15thdoverscouts.org.uk/images/buttons.png") 0 0 no-repeat; text-decoration: none;}
+ul.menu a:hover { background-position: 0 -38px; color: #000000; }
+ul.menu li.selected a { background-position: 0 -38px; color: #000000; }
+
+.nongarish { background-color:  #59B75D; }
+
+
+div#latestnews {
+    border: 1px solid #FFFF33;
+    /*background-color: #CFC6F0;
+    background-image: url('http://static.15thdoverscouts.org.uk/images/latestnewsbg.png');
+    background-repeat: no-repeat;*/
+}
+
+
+div#latestnews ul {
+    margin-left: 0px;
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    list-style: none;
+}
+div#latestnews ul li {
+    border-bottom: 1px solid #FFFF33;
+    font-size: 8pt;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+div#latestnews ul li a {
+    color: #FFFF33;
+    font-size: 8pt;
+    font-weight: bold;
+    text-decoration: none;
+}

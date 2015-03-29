@@ -1,0 +1,733 @@
+/**
+ * Page look Styles
+ */
+
+body {
+    background-color: #FAFAFA;
+}
+
+div#page {
+    border: solid #DEDEDE;
+    border-width: 0px 1px 1px 1px;
+    background-color: white;
+}
+
+div#content {
+	padding: 3px 0px 0px 5px;
+}
+
+div#tabs {
+	border-bottom: 1px solid #999;
+	text-align: right;
+}
+
+div#tabs a {
+	background: white;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-top: 1px solid #999;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+	padding: 3px 6px 2px;
+	position: relative;
+	bottom: 2px;
+}
+
+div#tabs a.active {
+	border-bottom: 1px solid white;
+}
+
+div#footer p, div#footer p a {
+    color: #888888;
+    font-size: 8pt;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+div#navigation {
+	background-color: #9CC718;
+}
+
+div#sidebar {
+	background-color: #9cc718;
+	background-image: url('http://static.15thdoverscouts.org.uk/images/sidebar_gradient.png');
+	background-repeat: repeat-y;
+	border-right: 1px solid #999;
+	color: #2E0F46;
+	padding-left: 15px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+div#sidebar p {
+	color: #2E0F46;
+}
+
+div#sidebar  ul {
+    margin-left: 0px;
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-right: 10px;
+    list-style: none;
+}
+div#sidebar  ul li {
+    border-bottom: 1px solid black;
+    font-size: 9pt;
+    padding: 10px 0px;
+	min-height: 60px;
+    text-align: justify;
+}
+div#sidebar  ul li + li {
+    border-top: 1px solid #CCC;
+}
+div#sidebar  ul li a {
+    color: #2E0F46;
+	display: block;
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+}
+
+.loginhref, .loginhref a {
+    font-size: 11pt;
+	text-align: right;
+}
+
+#status_bar {
+    font-size: 9pt;
+	height: 19px;
+}
+
+#search_bar {
+    font-size: 9pt;
+}
+
+div.box {
+    border: 1px solid #cccccc;
+    background-color: #EEEEEE;
+    color: #000000;  
+    padding: 5px;  
+    margin: 5px;
+}
+
+a.site-loginhead {
+	display: block;
+	font-size: 12pt;
+	text-align: center;
+}
+
+table.loginbox tr td {
+    margin: 0px;
+    border: 0px none;
+	padding: 0px;
+	vertical-align: top;
+}
+
+/**
+ * Content Styles
+ */
+
+body, p, td, a {
+    font-family: Geneva, Arial, Helvetica, san-serif;
+    font-size: 11pt;
+    color: #333333;
+}
+
+p {
+    margin-top: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #4E2A77; /* #796095; light purple; #4E2A77; dark purple; */
+    text-align: left;
+}
+.h2 {
+	display: block;
+	font-size: 14pt !important;
+}
+.h3 {
+	display: block;
+	font-size: 12pt !important;
+	margin: 15px 0px;
+}
+.hd {
+    font-weight: bold;
+    text-align: left;
+}
+
+a, a:link, a:hover, a:visited {
+    color: #3333FF;
+    cursor: pointer;
+}
+a.headline {
+    color: #4E2A77; /* #796095; light purple; #4E2A77; dark purple; */
+	display: block;
+    font-size: 16pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.read_more {
+	color: #33B;
+	font-size: 10pt;
+}
+
+.error, .red, .dud {
+    color: #FF0000 !important;
+    /*font-size: 9pt; Needed? */
+}
+
+p img {
+    border: none;
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+table tr td {
+    margin: 0px;
+    padding: 5px;
+    border: 1px solid #666666;
+}
+
+table tr.highlight td {
+    background-color: #FFBBBB;
+}
+
+/*
+* Navigation Meun
+*
+*/
+
+ul.menu {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+ul.menu li {
+	float: left;
+	position: relative;
+}
+
+ul.menu li a {
+    background-color: #9CC718;
+    background-image: url('http://static.15thdoverscouts.org.uk/images/menu-bg.png');
+    border: 1px solid #9CC718;
+    color: #2E0F46;
+    display: block;
+    height: 18px;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+ul.menu li.selected a, ul.menu li a:hover { 
+    background-color: #FFFF33;
+    background-image: url('http://static.15thdoverscouts.org.uk/images/menu-bg-sel.png');
+    border: 1px solid #9CC718;
+    color: #2E0F46;
+}
+
+ul.menu li div.attention {
+	background-color: #ff0;
+	border: 1px solid #8B6914;
+	border-radius: 5px;
+	position: absolute;
+	right: 3px;
+	bottom: 1px;
+	height: 11px;
+	width: 11px;
+}
+
+/**
+ * News Styles
+ */
+
+.newsitem {
+	clear: both;
+	margin: 10px;
+	min-height: 130px;
+	border-bottom: 1px solid #DDD;
+}
+.news-snippet {
+	height: 3.6em;
+	text-overflow: ellipsis;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+.newsitem-first {
+	clear: both;
+	margin: 10px;
+	height: 185px;
+	border-bottom: 1px solid #DDD;
+}
+.newsitem-second {
+	clear: both;
+	margin: 10px;
+	width: 400px;
+	height: 130px;
+	border-bottom: 1px solid #DDD;
+}
+.newsitem-first .news-snippet {
+	height: 7em;
+	text-overflow: ellipsis;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+.newsitem-first a.headline {
+	font-size: 18pt;
+}
+.newsitem-first img {
+	height: 150px;
+	float: left;
+	margin-right: 6px;
+}
+
+.newsitem img {
+	height: 75px;
+	float: left;
+	margin-right: 6px;
+}
+
+/**
+ * Search Styles
+ */
+
+.search_title {
+	display: block;
+	font-size: 17px;
+}
+.search_subtext {
+	color: #999;
+	font-size: 8pt;
+	margin-bottom: 3px;
+	margin-top: -3px;
+}
+
+/**
+ * Hypothetical
+ */
+
+.sidebar_box {
+	background: white;
+	border-color: #363;
+	border-radius: 10px 10px;
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+/**
+ * Admin Users Styles
+ */
+
+table.user {
+    width: 100%;
+}
+
+table.user tr td {
+    border: 1px solid #666666;
+    line-height: 14px;
+    padding: 2px;
+}
+
+/**
+ * Not Needed?
+ */
+.button, a.button {
+    background-color: #9CC718;
+    background-image: url('http://static.15thdoverscouts.org.uk/images/menu-bg.png');
+    border: 1px solid #9CC718;
+    color: #2E0F46;
+	cursor: pointer;
+    display: block;
+	float: left;
+	font-size: 11pt;
+    min-height: 16px;
+    margin: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 120px;
+}
+
+/**
+ * Picture Style
+**/
+
+a.picture {
+	background: #F3F3F3;
+	border: 1px solid #DDD;
+	color: #666;
+	display: inline;
+	font-size: 10pt;
+	float: right;
+	margin: 5px;
+	padding: 4px;
+	text-align: center;
+	text-decoration: none;
+	height: 120px;
+	width: 120px;
+}
+
+a.picture img {
+	height: 90px;
+}
+a.picture-large {
+	background: #F3F3F3;
+	border: 1px solid #DDD;
+	color: #666;
+	display: inline;
+	font-size: 10pt;
+	float: right;
+	margin-left: 10px;
+	margin-right: 0px;
+	padding: 4px;
+	text-align: center;
+	text-decoration: none;
+}
+
+a.picture-large img {
+	max-width: 380px;
+}
+
+img.dropshadow {
+ -moz-box-shadow: 3px 3px 4px #999; /* Firefox */
+ -webkit-box-shadow: 3px 3px 4px #999; /* Safari/Chrome */
+ box-shadow: 3px 3px 4px #999; /* Opera and other CSS3 supporting browsers */
+ -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";/* IE 8 */
+ : progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');/* IE 5.5 - 7 */ 
+}
+
+/**
+ * Forum Style
+ */
+
+div.forum_head {
+	background: #1D496C url(http://static.15thdoverscouts.org.uk/images/forum_head_gradient.gif) repeat-x;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+}
+div.forum_subhead {
+	background: #1D496C url(http://static.15thdoverscouts.org.uk/images/forum_head_gradient.gif) repeat-x;
+	border: 1px solid #999;
+}
+div.forum_head_dark {
+	background: #0C1113 url(http://static.15thdoverscouts.org.uk/images/forum_head_darkgradient.gif) repeat-x;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+}
+
+div.forum_head h2, div.forum_head_dark h2, div.forum_head_dark h2 a {
+	color: white;
+	font-size: 18px;
+	font-weight: normal;
+	text-decoration: none;
+	text-indent: 10px;
+}
+
+div.forum_head span, div.forum_head_dark span, div.forum_subhead span {
+	color: white;
+}
+
+div.forum_post_meta {
+	background: #1D496C url(http://static.15thdoverscouts.org.uk/images/gradient_forumhead.gif) repeat-x;
+	color: white;
+	padding: 3px;
+}
+
+div.forum_post_meta img {
+	height: 16px;
+	margin-bottom: -3px;
+	width: 16px;
+}
+
+div.forum_section, div.forum_section a, div.forum_section p, div.forum_section li, 
+div.forum_topic, div.forum_topic a, div.forum_topic p, div.forum_topic li,
+div.forum_post, div.forum_post a, div.forum_post p, div.forum_post li {
+	font-size: 11px;
+}
+
+div.forum_section, div.forum_topic {
+	background: white url(http://static.15thdoverscouts.org.uk/images/grey-up.png) repeat-x 0% 100%;
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+}
+div.forum_post {
+	background: #E8E8E8 url('http://static.15thdoverscouts.org.uk/images/gradient_postbit.gif') repeat-x;
+	border-collapse: collapse;
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	overflow: hidden;
+}
+
+div.forum_section_name a {
+	font-size: 15px;
+}
+div.forum_topic_image {
+	float: left;
+	height: 32px;
+	margin-right: 10px;
+	width: 32px;
+}
+div.forum_topic_name a {
+	display: block;
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+div.forum_post_author {
+	padding: 10px 10px 0px;
+}
+div.forum_post_author p {
+	color: #4E2A77;
+	font-size: 18px;
+	text-align: center !important;
+}
+div.forum_post_author ul {
+	list-style: none;
+	margin-top: -10px;
+	padding: 0px;
+}
+div.forum_post_author  li {
+	text-align: center;
+	width: 100%;
+}
+
+div.forum_post_body {
+	border-left: 1px solid #B3B3B3;
+}
+div.forum_post_body p {
+	font-size: 12px;
+}
+
+/**
+ * Calendar Styles
+ */
+
+table.calendar {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+table.calendar tr.calendar-header td {
+    background-color: #9CC718;
+    border: 1px solid #9CC718;
+    font-size: 10pt;
+    height: 16px;
+    padding: 0px;
+    line-height: 16px;
+    text-align: center;           
+}
+
+table.calendar tr.calendar-date td{
+    background-color: #CAEC65;    
+    border-left: 1px solid #9CC718;
+    border-right: 1px solid #9CC718;
+    border-top: 1px solid #9CC718;
+    font-size: 8pt;
+    height: 16px;
+    line-height: 16px;
+    padding: 0px;
+    padding-right: 5px;
+    text-align: right;     
+}
+table.calendar tr.calendar-date td a {
+	color: #666;
+	font-size: 8pt;
+	text-decoration: none;
+}
+
+table.calendar tr.calendar-events td {
+    border-bottom: 1px solid #9CC718;
+    border-left: 1px solid #9CC718;
+    border-right: 1px solid #9CC718;
+    height: 81px;
+    padding: 0px; 
+    vertical-align: top;
+}
+
+table.calendar tr.calendar-events td.calendar-today {
+    background-color: #FFFF90; 
+}
+
+table.calendar tr.calendar-events td.calendar-sel {
+    background-color: #E8EEF7; 
+}
+
+table.calendar tr.calendar-date td.calendar-fade,
+table.calendar tr.calendar-date td.calendar-fade a {
+    color: #777777;
+}
+
+div.calendar-head {
+	height: 22px;
+	border: 1px solid #9CC718;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 5px 8px 0px;
+}
+
+div.calendar-tail {
+	height: 22px;
+	border: 1px solid #9CC718;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 4px 8px;
+	margin-top: -1px;
+	text-align: right;
+}
+
+
+/* 
+*  Calendar Event Style
+*  
+*                       
+*/
+
+div.day-event-troop, div.day-event-scout, div.day-event-other,
+a.day-event-troop, a.day-event-scout, a.day-event-other {
+	display: block;
+    font-size: 8pt;
+    padding: 2px;
+	text-decoration: none;
+    -moz-border-radius-bottomleft: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-bottom-left-radius: 3px 3px;
+    -webkit-border-bottom-right-radius: 3px 3px;
+    -webkit-border-top-left-radius: 3px 3px;
+    -webkit-border-top-right-radius: 3px 3px;
+}
+
+div.day-event-troop,
+a.day-event-troop {
+    background-color: maroon;
+    color: white;
+}
+
+div.day-event-scout,
+a.day-event-scout {
+    background-color: #C3D9FF;
+    border: 1px solid #666666;
+    color: #555555;
+}
+
+div.day-event-other,
+a.day-event-other {
+    background-color: #FF9;
+    border: 1px solid #CC6;
+    color: #888;
+}
+
+div.event-troop, div.event-scout, div.event-other,
+a.event-troop, a.event-scout, a.event-other {
+	display: block;
+    text-decoration: none; 
+    font-size: 8pt;
+}
+
+div.event-troop,
+a.event-troop {
+    color: maroon;
+}
+
+div.event-scout,
+a.event-scout {
+    color: #7995BB;
+}
+
+div.event-other,
+a.event-other {
+    color: #B0B011;
+}
+
+a.event-troop span.ev-tm, a.event-scout span.ev-tm, a.event-other span.ev-tm {
+    font-size: 7pt;
+    font-weight: bold;
+}
+
+/**************************************************************************************
+  htmlDatePicker CSS file
+  
+  Feel Free to change the fonts, sizes, borders, and colours of any of these elements
+***************************************************************************************/
+/* The containing DIV element for the Calendar */
+#dpCalendar {
+  display: none;          /* Important, do not change */
+  position: absolute;        /* Important, do not change */
+  background-color: #eeeeee;
+  color: black;
+  font-size: xx-small;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  width: 150px;
+}
+/* The table of the Calendar */
+#dpCalendar table {
+  border: 1px solid black;
+  background-color: #eeeeee;
+  color: black;
+  font-size: xx-small;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+/* The Next/Previous buttons */
+#dpCalendar .cellButton {
+  background-color: #ddddff;
+  color: black;
+}
+/* The Month/Year title cell */
+#dpCalendar .cellMonth {
+  background-color: #ddddff;
+  color: black;
+  text-align: center;
+}
+/* Any regular day of the month cell */
+#dpCalendar .cellDay {
+  background-color: #ddddff;
+  color: black;
+  text-align: center;
+}
+/* The day of the month cell that is selected */
+#dpCalendar .cellSelected {
+  border: 1px solid red;
+  background-color: #ffdddd;
+  color: black;
+  text-align: center;
+}
+/* The day of the month cell that is Today */
+#dpCalendar .cellToday {
+  background-color: #ddffdd;
+  color: black;
+  text-align: center;
+}
+/* Any cell in a month that is unused (ie: Not a Day in that month) */
+#dpCalendar .unused {
+  background-color: transparent;
+  color: black;
+}
+/* The cancel button */
+#dpCalendar .cellCancel {
+  background-color: #cccccc;
+  color: black;
+  border: 1px solid black;
+  text-align: center;
+}
+/* The clickable text inside the calendar */
+#dpCalendar a {
+  font-size: 11px;
+  text-decoration: none;
+  background-color: transparent;
+  color: blue;
+}  

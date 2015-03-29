@@ -1,0 +1,13 @@
+a.picture {
+	background: #F3F3F3;
+	border: 1px solid #DDD;
+	color: #666;
+	display: inline;
+	float: left;
+	margin: 5px;
+	padding: 4px;
+	text-align: center;
+	text-decoration: none;
+	height: 120px;
+	width: 120px;
+}

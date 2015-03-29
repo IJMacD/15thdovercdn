@@ -1,0 +1,173 @@
+body {
+    margin: 0px;
+    padding: 0px 0px 10px 0px;
+}
+
+div#page
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 740px;
+    padding: 0 6px 6px 6px;
+}
+
+div#container {
+	padding-right: 10px;
+	padding-top: 140px;
+	margin-left: 180px;
+}
+
+div#navigation {
+	float: left;
+    width: 160px;
+	position: absolute;
+	top: 140px;
+}
+
+div#header {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+	width: 740px;
+	position: absolute;
+	top: 0px;
+}
+
+div#footer {
+	clear: both;
+    text-align: center;
+}
+
+div#container p {
+    text-align: justify;
+}
+
+div#latestnews {
+    /*float: right;*/
+    margin-left: 570px;
+    margin-top: 25px;
+    padding-left: 15px;
+    padding-top: 10px;
+    min-height: 300px;
+    width: 161px;
+} 
+
+ul.menu {
+    margin-left: 0px;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+ul.menu li {
+}
+
+div#tabs {
+	height: 23px;
+	margin-top: -23px;
+	position: relative;
+    text-align: right;
+	z-index: 1;
+}
+
+ul#tabs {
+    list-style-type: none;
+    float: right;
+    /*margin-top: -20px; */
+}
+
+ul#tabs li a {
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 20px;
+}
+
+ul.forum_list, div.forum_section ul, div.forum_topic ul{
+	list-style:none outside none;
+	margin-top: 0px;
+	padding-left: 0px;
+}
+
+div.forum_head {
+	height: 25px;
+	margin-top: 10px;
+	min-width: 570px;
+	padding-top: 5px;
+}
+
+div.forum_head h2 {
+	clear: right;
+	display: block;
+	float: left;
+	margin: 0px;
+	width: 75%;
+}
+
+div.forum_head span {
+	clear: right;
+	display: block;
+	float: left;
+	width: 20%;
+}
+
+div.forum_section{
+	height: 71px;
+	min-width: 550px;
+	overflow: hidden;
+	padding: 10px;
+}
+ 
+div.forum_topic{
+	height: 30px;
+	min-width: 550px;
+	overflow: hidden;
+	padding: 10px;
+}
+div.forum_post{
+	min-height: 150px;
+	min-width: 570px;
+}
+div.forum_section_name {
+	float: left;
+	height: 71px;
+	width: 330px;
+}
+
+div.forum_topic_name {
+	float: left;
+	height: 30px;
+	width: 290px;
+}
+div.forum_post_author {
+	float: left;
+	padding: 10px;
+	width: 160px;
+}
+div.forum_section_stats{
+	float:left;
+	height: 61px;
+	padding: 10px 10px 0px 0px;
+	text-align: right;
+	width: 80px;
+}
+ 
+div.forum_topic_stats {
+	float:left;
+	height: 20px;
+	padding-right: 10px;
+	text-align: right;
+	width: 80px;
+}
+
+div.forum_post_body {
+	margin: 10px 0px 10px 180px;
+	min-height: 150px;
+	padding: 0px 10px 0px 10px;
+}
+div.forum_section_latest{
+	height: 71px;
+}
+ 
+div.forum_topic_latest{
+	height: 30px;
+}
