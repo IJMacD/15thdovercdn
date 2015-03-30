@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery Management</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <style>
+      article {
+        background: #F4F4F4;
+        border: 1px solid #CCC;
+        border-radius: 10px;
+        box-shadow: inset #999 0 0 10px;
+        margin: 10px 0;
+        overflow: hidden;
+        padding: 10px;
+      }
+      .snippet {
+        height: 132px;
+      }
+      article h2 {
+        cursor: pointer;
+      }
+      article img {
+        margin: 3px 0px;
+        vertical-align: top;
+      }
+      .btn-danger {
+        margin-top: 10px;
+      }
+      #description {
+        height: 100px;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <h1>Albums</h1>
+    {% if not logged_in %}
+    <p>You are not currently authorized.
+        <a href="/auth/start" class="btn" id="start-btn">Start Authorization</a>
+    </p>
+    {% endif %}
+    {% for album in albums %}
+    <article data-key="{{ album.key }}" class="snippet">
+      <h2>Album: {% if album.gid %}Existing {{ album.gid }}{% else %}{{ album.title }}{% endif %}</h2>
+      {% if not album.posted %}
+        <div class="alert alert-warning">
+          This album has not been posted yet. Click to try again now.
+          <button class="btn btn-warning try-again"><i class="icon-white icon-refresh"></i> Try Again</button>
+        </div>
+      {% endif %}
+      {% for image in album.images %}
+        <a href="{{ image.full }}"><img src="{{ image.thumb }}"/></a>
+      {% endfor %}<br>
+      {% if logged_in %}
+      <button class="btn btn-warning try-again"><i class="icon-white icon-refresh"></i> Re-submit</button>
+      <button class="btn btn-danger delete"><i class="icon-white icon-trash"></i> Delete</button>
+      {% endif %}
+    </article>
+    {% endfor %}
+
+    {% if logged_in %}
+    <h1>Create Gallery</h1>
+    <form action="{{ action }}" method="post" enctype="multipart/form-data" class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label" for="title">Title</label>
+        <div class="controls">
+          <input type="text" id="title" name="title" />
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="description">Description</label>
+        <div class="controls">
+          <textarea id="description" name="body"></textarea>
+          <p class="help-text">This is descriptive text which appears of the gallery page for the album.</p>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Files:</label>
+        <div class="controls">
+          <input type="file" name="photos[]">
+          <input type="file" name="photos[]">
+          <input type="file" name="photos[]">
+          <input type="file" name="photos[]">
+          <input type="file" name="photos[]">
+          <input type="file" name="photos[]">
+          <input type="file" name="photos[]">
+          <input type="file" name="photos[]">
+          <input type="file" name="photos[]">
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary"><i class="icon-white icon-upload"></i> Upload Images</button>
+      </div>
+    </form>
+    {% endif %}
+
+    <h1>Migrate Gallery</h1>
+    <form action="/gallery/migrate" method="post" class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label" for="url">Enter album URL:</label>
+        <div class="controls">
+          <input id="url" type="url" name="url" size="100">
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary"><i class="icon-white icon-arrow-right"></i> Migrate Album</button>
+      </div>
+    </form>
+
+    <script src="/js/jquery-1.7.2.min.js"></script>
+    <script>
+    $(function(){
+        $('article').each(function(i,item){
+            var article = $(this),
+                key = $(this).data('key'),
+                alert_div = article.find('div'),
+                title = article.find('h2'),
+                btn_try = article.find('.try-again'),
+                btn_del = article.find('.delete');
+            btn_try.click(function(){
+                $.ajax('/gallery/forward', {
+                        data: {key:key},
+                        type: 'post',
+                        success: function(data){
+                            alert_div.addClass('alert-info');
+                            alert_div.empty().text('The album was successfully submitted this time. ');
+                            $('<a>').attr('href', data).text('View').appendTo(alert_div);
+                            alert_div.show();
+                        },
+                        error: function(){
+                            alert_div.addClass('alert-error');
+                            alert_div.text('The album still has not been submitted successfully.');
+                            alert_div.show();
+                        }
+                    });
+                alert_div.removeClass('alert-warning').hide();
+            });
+            title.click(function(){
+                article.toggleClass('snippet');
+            });
+            {% if logged_in %}
+            btn_del.click(function(){
+                if(confirm("Are you sure you want to delete this album and its pictures?"))
+                {
+                    $.ajax('/gallery/delete', {
+                        data: {key:key},
+                        type: 'post',
+                        success: function(data){
+                            article.before($('<div>').addClass("alert alert-success")
+                                .text("The album has been deleted."));
+                            article.remove();
+                        },
+                        error: function(){
+                            article.before($('<div>').addClass("alert alert-warning")
+                                .text("The album has not been deleted."));
+                        }
+                    });
+                }
+            });
+            {% endif %}
+        });
+        $('#start-btn').click(function(event){
+            var url = $(event.target).attr('href'),
+                newwindow = window.open(url,'oauth_popup','height=400,width=600');
+            if (window.focus)
+                newwindow.focus();
+            return false;
+        });
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="http://static.15thdoverscouts.org.uk/stylesheets/style.v4.5.css" />
+<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css">
+<style type="text/css">
+.container {
+    border: none;
+}
+label h3 {
+    display: inline;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>15th Dover Scouts</h1>
+<h2>Picasa photo gallery uploader</h2>
+
+
+{% if not logged_in %}
+<p>You are not currently authorized.
+    <a href="oauthstart" class="btn" id="start-btn">Start Authorization</a>
+</p>
+<form name='f' method='post' action='{{ upload_url }}' style="display:none;">
+{% else %}
+<form name='f' method='post' action='{{ upload_url }}'>
+{% endif %}
+
+<div style="float:left;width:400px;">
+
+<label for="albumchoice_new">
+    <h3>New Album</h3>
+    <input type="radio" name="albumchoice" value="new" id="albumchoice_new" checked/>
+</label>
+
+
+<h4>Album Title:</h4>
+<input style="font-family: Arial; font-size: 16px; width:300px;" type="text" name="title" id="title" tabindex="1">
+
+<h4>Album Description:</h4>
+<textarea style="font-family: Arial; font-size: 14px; height: 100px; width:300px;" name="body"></textarea>
+</div>
+
+<div>
+
+<label for="albumchoice_exist">
+    <h3>Existing Album</h3>
+    <input type="radio" name="albumchoice" value="exist" id="albumchoice_exist" />
+</label>
+
+
+<h4>Album:</h4>
+<select name="existingalbum">
+
+</select>
+</div>
+
+<div style="clear:both;">
+<h4>Selected images</h4>
+<!--Preview "tray": draw shadowed square thumbnails of size 48x48
+    use a thumbnail if you don't want exif (saves space)
+    thumbnail requests are clamped at 144 pixels
+    (negative values give square-cropped images)
+        $small = $e['photo:thumbnail']."?size=120";
+        $large = $e['photo:imgsrc']."?size=570";
+        $full = $e['photo:imgsrc']."?size=1600"; -->
+{% if images.length %}
+{% for image in images %}
+    <img src="{{ image.photo_thumbnail }}?size=-48">;
+    <input type="hidden" name="{{ image.photo_imgsrc }}?size=1600">
+{% endfor %}
+{% else %}
+    <p>No images received...</p>
+{% endif %}
+
+</div>
+
+<input type="submit" value="Upload" class="btn">
+
+</form>
+
+<div style="margin-top: 30px; text-align:center">
+<a target="_x" href="http://15thDoverScouts.org.uk/">15th Dover Scouts Home</a>
+</div>
+</div>
+<script src="http://static.15thdoverscouts.org.uk/js/jquery-1.7.2.min.js"></script>
+<script>
+$(function(){
+    $('#start-btn').click(function(event){
+        var url = $(event.target).attr('href'),
+            newwindow = window.open(url,'oauth_popup','height=400,width=600');
+        if (window.focus) 
+            newwindow.focus();
+        return false;
+    });
+});
+function setAuthorized(){
+    $('form').show();
+    $('p').first().hide();
+}
+</script>
+</body>
+</html>

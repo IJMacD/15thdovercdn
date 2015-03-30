@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>{{ title }}</title>
+<link href="http://static.15thdoverscouts.org.uk/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+a { cursor: pointer; }
+</style>
+<script src="http://static.15thdoverscouts.org.uk/js/jquery-1.7.2.min.js"></script>
+<script>
+$(function(){
+    $('#start-btn').click(function(event){
+        var url = $(event.target).attr('href'),
+            newwindow = window.open(url,'oauth_popup','height=400,width=600');
+        if (window.focus) 
+            newwindow.focus();
+        return false;
+    });
+    $('#get-users-btn').click(function(){
+        var ul = $('#user-list');
+        $.get('/auth/test-users', function(data){
+            $.each(data, function(i,item){
+                var li, a;
+                a = $('<a>').text(item.username).data('user',item).click(function(event){
+                    li.text(JSON.stringify(a.data('user')));
+                });
+                li = $('<li>').append(a);
+                ul.append(li);
+            });
+        }, "json");
+        ul.empty();
+    })
+});
+</script>
+</head>
+<body>
+<h1>15th Dover OAuth</h1>
+{% if oauth.is_authorized %}
+<p>Congratulations, you are authorized as {{ oauth.username }}. It will expire at {{ oauth.expiry|date:"c" }}.
+    <button id="get-users-btn" class="btn">Get Users</button>
+    <a href="/auth/logout" class="btn">Logout</a>
+</p>
+<ul id="user-list"></ul>
+{% else %}
+<p>You are not currently authorized.
+    <a href="/auth/start" class="btn" id="start-btn">Start Authorization</a>
+</p>
+{% endif %}
+</body>
+</html>

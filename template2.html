@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <form action="{{ action }}" method="post" enctype="multipart/form-data">
+
+	
+    {% for image in images %}
+      <input type="hidden" name="{{ image }}"/>
+    {% endfor %}
+	
+      <div><input type="submit" value="Upload"></div>
+    </form>
+
+    <a href="{{ url }}">{{ url_linktext }}</a>
+
+  </body>
+</html>

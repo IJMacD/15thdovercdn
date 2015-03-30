@@ -1,0 +1,698 @@
+/**
+ * Page look Styles
+ */
+
+/**
+ * Color Chart:
+
+ #57068C; Scout purple;            H1,H2,H3
+ #796095; light purple;
+ #4E2A77; dark purple;
+ #2E0F46; very dark purple;        Primary Menu Text Color
+
+ #627d14; Dark Green            Secondary Menu Border
+ #9CC718; Light Green            Secondary Menu Color
+ */
+@font-face {
+    font-family: 'TheSerifCapsBlack';
+    src: url('font/theserif_caps_black-webfont.eot');
+    src: local("☺"),
+         url('font/theserif_caps_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/theserif_caps_black-webfont.woff') format('woff'),
+         url('font/theserif_caps_black-webfont.ttf') format('truetype'),
+         url('font/theserif_caps_black-webfont.svg#the_serif_black-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'TheSerifPlain';
+    src: url("font/theserif-hp5plain-webfont.eot");
+    src: local("☺"),
+        url("font/theserif-hp5plain-webfont.eot?#iefix") format("embedded-opentype"),
+        url("font/theserif-hp5plain-webfont.woff") format("woff"),
+        url("font/theserif-hp5plain-webfont.ttf") format("truetype"),
+        url("font/theserif-hp5plain-webfont.svgz#TheSerifPlain") format("svg"),
+        url("font/theserif-hp5plain-webfont.svg#TheSerifPlain") format("svg");
+    font-weight:normal;
+    font-style:normal
+}
+@font-face{
+    font-family: 'TheSerifSemi';
+    src: url("font/theserif-hp6sebld-webfont.eot");
+    src: local("☺"),
+        url("font/theserif-hp6sebld-webfont.eot?#iefix") format("embedded-opentype"),
+        url("font/theserif-hp6sebld-webfont.woff") format("woff"),
+        url("font/theserif-hp6sebld-webfont.ttf") format("truetype"),
+        url("font/theserif-hp6sebld-webfont.svgz#TheSerifSemi") format("svg"),
+        url("font/theserif-hp6sebld-webfont.svg#TheSerifSemi") format("svg");
+    font-weight:normal;
+    font-style:normal
+}
+@font-face{
+    font-family: 'TheSerifExtraBold';
+    src: url("font/theserif-exbld-webfont.eot");
+    src: local("☺"),
+        url("font/theserif-exbld-webfont.eot?#iefix") format("embedded-opentype"),
+        url("font/theserif-exbld-webfont.woff") format("woff"),
+        url("font/theserif-exbld-webfont.ttf") format("truetype"),
+        url("font/theserif-exbld-webfont.svgz#TheSerifBlack") format("svg"),
+        url("font/theserif-exbld-webfont.svg#TheSerifBlack") format("svg");
+    font-weight:normal;
+    font-style:normal
+}
+
+body {
+    background-color: #FAFAFA;
+}
+
+/* ie ugliness workaround */
+a img {
+    border: none;
+}
+
+div#body {
+    background-color: white;
+}
+
+div#content {
+}
+
+div#header a {
+    text-decoration: none;
+}
+
+div#tabs {
+    border-bottom: 1px solid #999;
+    text-align: right;
+}
+
+div#tabs a {
+    background: white;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-top: 1px solid #999;
+    border-top-left-radius: 5px 5px;
+    border-top-right-radius: 5px 5px;
+    padding: 3px 6px 2px;
+    position: relative;
+    bottom: 2px;
+    z-index: 1;
+}
+
+div#tabs a.active {
+    border-bottom: 1px solid white;
+}
+
+div#footer {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #d6d6d6 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d6d6d6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#d6d6d6 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#d6d6d6 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#d6d6d6 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#d6d6d6 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-9 */
+    color: black;
+    padding: 10px;
+}
+
+div#footer p, div#footer p a {
+    color: #999;
+    font-size: 8pt;
+    margin-bottom: 0px;
+    text-align: center;
+}
+div#navigation {
+}
+
+div.infobox {
+    border: 3px solid #57068C;
+    padding: 10px;
+    margin: 10px;
+}
+div.infobox h2{
+    margin: 0px;
+}
+div#loginbox label{
+    font-weight: bold;
+    font-size: 9pt;
+}
+div#loginbox  input[type="text"],
+div#loginbox  input[type="password"]{
+    width: 95%;
+    border-radius: 5px;
+    padding: 5px;
+}
+div#loginbox p.error {
+    display: inline;
+    font-weight: bold;
+    font-size: 9pt;
+}
+div#loginbox p{
+    color: #999;
+    font-style: italic;
+    font-size: 10pt;
+    margin-bottom: 0;
+}
+div#loginbox p a{
+    font-style: italic;
+    font-size: 10pt;
+}
+div#latestupdates ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+div#latestupdates ul li {
+    border-bottom: 1px solid #2E0F46;
+    font-size: 9pt;
+    padding: 10px 0px;
+    min-height: 60px;
+    text-align: justify;
+}
+div#latestupdates ul li + li {
+    border-top: 1px solid #796095;
+}
+div#latestupdates ul li a {
+    color: #3D0066;
+    display: block;
+    font-size: 11pt;
+    text-decoration: none;
+    text-align: left;
+}
+
+div#todaysevents a {
+    color: #3D0066;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+#status_bar {
+    font-size: 9pt;
+    height: 19px;
+}
+
+#search_bar {
+    font-size: 9pt;
+}
+
+a.category-label {
+    border-radius: 3px;
+    color: white !important;
+    font-size: 9pt !important;
+    padding: 1px 3px;
+    text-decoration: none;
+    display: block;
+    float: right;
+}
+
+a.category-label.gallery {
+    background: #64992C;
+}
+a.category-label.news {
+    background: #900;
+}
+a.category-label.programme,
+a.category-label.calendar,
+a.category-label.event {
+    background: #57068C;
+}
+a.category-label.forum {
+    background: #074D8F;
+}
+
+.loginhref, .loginhref a {
+    font-size: 9pt;
+    text-align: right;
+}
+
+div.box {
+    border: 1px solid #CCC;
+    background: white url(http://static.15thdoverscouts.org.uk/images/grey_up_36.png) repeat-x 0% 100%;
+    color: black;
+    padding: 10px;
+}
+
+a.site-loginhead {
+    display: block;
+    font-size: 12pt;
+    text-align: center;
+}
+
+table.loginbox tr td {
+    margin: 0px;
+    border: 0px none;
+    padding: 0px;
+    vertical-align: top;
+}
+
+/**
+ * Content Styles
+ */
+
+body, p, td, a {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    color: #333333;
+}
+
+p {
+    margin-top: 2px;
+}
+
+a {
+    color: #3333FF;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+  color: #4d2177;
+  font-family: "TheSerifExtraBold",Tahoma,Verdana,Arial,Sans-serif;
+  text-transform: uppercase;
+}
+h2 {
+  color: #4d2177;
+  font-family: "TheSerifExtraBold",Tahoma,Verdana,Arial,Sans-serif;
+}
+.hd {
+    font-weight: bold;
+    text-align: left;
+}
+.subtitle {
+    color: rgb(139,0,102);
+}
+/* Dialog Style Title Bar */
+.dialog-title {
+    background-color: #9CC718;
+    background-image: url(http://static.15thdoverscouts.org.uk/images/green_down_36.png);
+    border: 1px solid #627D14;
+    padding: 4px;
+    border-radius: 5px;
+    color: white !important;
+}
+a.headline {
+    display: block;
+    font-size: 16pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.read_more {
+    color: #33B;
+    font-size: 10pt;
+}
+
+.error, .red, .dud {
+    color: #FF0000 !important;
+    /*font-size: 9pt; Needed? */
+}
+
+p img {
+    border: none;
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 3px solid rgb(132,164,11);
+    color: rgb(77,33,119);
+}
+
+tr td {
+    margin: 0px;
+    padding: 5px;
+}
+
+tr:nth-child(odd) td {
+    background-color: #EEE;
+}
+
+table tr.highlight td {
+    background-color: #FFBBBB;
+}
+
+blockquote {
+    background: #F9F9F9;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    box-shadow: 7px 7px 5px #888;
+    margin: 1.5em 30px;
+    padding: .5em 10px;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+* Navigation Meun
+*
+*/
+
+
+.menu {
+    border-top: 1px solid #627d14;
+    background: #9CC718 url(http://static.15thdoverscouts.org.uk/images/green_down_32.png) repeat-x 0% 100%;
+    padding: 0px 10px;
+    overflow: hidden;
+}
+
+.submenu {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #d6d6d6 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d6d6d6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#d6d6d6 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#d6d6d6 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#d6d6d6 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#d6d6d6 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-9 */
+    /*height: 26px;*/
+    padding: 4px 0px 3px;
+}
+
+.menu a {
+    border: 1px solid transparent;
+    color: white;
+    padding: 3px 14px 5px;
+    margin-right: 5px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 32px;
+    white-space: nowrap;
+}
+.submenu a {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #2E0F46;
+    padding: 5px 12px;
+    margin: 2px 5px 0px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.menu a.selected, .menu a.selected:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #999;
+    border-radius: 3px;
+    color: #2E0F46;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.menu a:hover {
+    color: white;
+    background-color: #627d14;
+    border: 1px solid #45570d;
+    border-radius: 5px;
+}
+
+.submenu a.selected, .submenu a.selected:hover {
+    background-color: #777;
+    border: 1px solid #666;
+    color: white;
+}
+
+.submenu a:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #999;
+    color: #2E0F46;
+}
+
+.menu a.disabled,
+.submenu a.disabled {
+    color: #999;
+}
+
+.menu a.disabled:hover,
+.submenu a.disabled:hover {
+    background: none;
+    border: 1px solid transparent;
+    color: #999;
+    cursor: default;
+}
+
+.menu div.attention {
+    background-color: #ff0;
+    border: 1px solid #8B6914;
+    border-radius: 5px;
+    position: absolute;
+    right: 3px;
+    bottom: 1px;
+    height: 11px;
+    width: 11px;
+}
+
+#home_menu_item {
+    background-image: url(http://static.15thdoverscouts.org.uk/images/menu_sprites.png);
+    background-repeat: no-repeat;
+    background-position: 8px -2px;
+    padding-left: 20px;
+    padding-right: 22px;
+}
+
+#home_menu_item.selected {
+    background-position: 8px -34px;
+}
+
+.add_menu_item {
+    background-image: url(http://static.15thdoverscouts.org.uk/images/menu_sprites.png);
+    background-repeat: no-repeat;
+    background-position: -26px -2px;
+    padding-left: 16px !important;
+    padding-right: 22px !important;
+}
+
+.submenu .add_menu_item, .add_menu_item.selected {
+    background-position: -26px -34px;
+}
+
+/**
+ * Search Styles
+ */
+
+.search_title {
+    display: block;
+    font-size: 17px;
+    clear: both;
+}
+.search_subtext {
+    color: #999;
+    font-size: 8pt;
+    margin-bottom: 3px;
+    margin-top: -3px;
+}
+
+/**
+ * Hypothetical
+ */
+
+.sidebar_box {
+    background: white;
+    border-color: #363;
+    border-radius: 10px 10px;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 14px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  *line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #bbbbbb;
+  *border: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: @background-color;
+  *background-color: #627D14;
+  background-image: -moz-linear-gradient(top, #9CC718, #627D14);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9CC718), to(#627D14));
+  background-image: -webkit-linear-gradient(top, #9CC718, #627D14);
+  background-image: -o-linear-gradient(top, #9CC718, #627D14);
+  background-image: linear-gradient(to bottom, #9CC718, #627D14);
+  background-repeat: repeat-x;
+  border-color: #627D14;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9CC718', endColorstr='#627D14', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  color: #FFFFFF;
+  background-color: #627D14;
+  *background-color: #003bb3;
+}
+
+.btn:first-child {
+  *margin-left: 0;
+}
+
+.btn:hover {
+  text-decoration: none;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+     -moz-transition: background-position 0.1s linear;
+       -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear;
+}
+
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn.active,
+.btn:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn.disabled,
+.btn[disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-large {
+  padding: 9px 14px;
+  font-size: 16px;
+  line-height: normal;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.btn-large [class^="icon-"] {
+  margin-top: 2px;
+}
+
+.btn-small {
+  padding: 3px 9px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.btn-small [class^="icon-"] {
+  margin-top: 0;
+}
+
+.btn-mini {
+  padding: 2px 6px;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/**
+ * Picture Style
+**/
+
+a.picture {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #333;
+    display: inline-block;
+    float: none;
+    font-size: 0.9em;
+    height: 160px;
+    line-height: 18px;
+    margin: 6px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 155px;
+}
+a.picture img {
+    box-shadow: 2px 2px 6px black;
+    height: 120px;
+    vertical-align: baseline;
+    width: 120px;
+}
+a.picture-large {
+    background: #F3F3F3;
+    border: 1px solid #999;
+    color: #666;
+    display: inline;
+    font-size: 10pt;
+    float: right;
+    margin-left: 10px;
+    margin-right: 0px;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.picture-large img {
+    max-width: 320px;
+}
+
+img.dropshadow {
+ -moz-box-shadow: 3px 3px 4px #999; /* Firefox */
+ -webkit-box-shadow: 3px 3px 4px #999; /* Safari/Chrome */
+ box-shadow: 3px 3px 4px #999; /* Opera and other CSS3 supporting browsers */
+ -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";/* IE 8 */
+ : progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');/* IE 5.5 - 7 */
+}

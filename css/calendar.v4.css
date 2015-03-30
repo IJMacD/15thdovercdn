@@ -1,0 +1,219 @@
+
+table.calendar {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+table.calendar tr.calendar-header td {
+    background-color: #9CC718;
+    border: 1px solid #9CC718;
+    font-size: 10pt;
+    height: 16px;
+    padding: 0px;
+    line-height: 16px;
+    text-align: center;
+    overflow: hidden;           
+}
+
+table.calendar tr.calendar-date td{
+    background-color: #CAEC65;    
+    border-left: 1px solid #9CC718;
+    border-right: 1px solid #9CC718;
+    border-top: 1px solid #9CC718;
+    font-size: 8pt;
+    height: 16px;
+    line-height: 16px;
+    padding: 0px;
+    padding-right: 5px;
+    text-align: right;     
+}
+.calendar tr:nth-child(odd) td {
+    background-color: white;
+}
+table.calendar tr.calendar-date td a {
+	color: #333;
+	font-size: 8pt;
+	text-decoration: none;
+}
+
+table.calendar tr td.calendar-events {
+    border-bottom: 1px solid #9CC718;
+    border-left: 1px solid #9CC718;
+    border-right: 1px solid #9CC718;
+    height: 81px;
+    padding: 0px; 
+    vertical-align: top;
+}
+
+div#calendar div.calendar-today,
+table.calendar tr td.calendar-events.calendar-today {
+    background-color: #FFFF90; 
+}
+
+table.calendar tr td.calendar-events.calendar-sel {
+    background-color: #E8EEF7; 
+}
+
+table.calendar tr.calendar-date td.calendar-fade,
+table.calendar tr.calendar-date td.calendar-fade a {
+    color: #777;
+}
+
+div.calendar-head {  
+	border: 1px solid #9CC718;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 5px 8px;
+    text-align: center;
+}
+
+div.calendar-tail {
+	height: 22px;
+	border: 1px solid #9CC718;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 4px 8px;
+	margin-top: -1px;
+	text-align: right;
+}
+
+div#calendar div.calendar-day {
+	border-right: 1px solid #9CC718;
+	width: 14%;
+	float: left;
+}
+div#calendar div.calendar-day div.calendar-date {
+	padding: 5px;
+	border-bottom: 1px solid #9CC718;
+	background-color: #CAEC65;
+	height: 34px;
+    overflow: hidden;
+}
+div#calendar div.calendar-day div.calendar-date a {
+	font-size: 8pt;
+}
+div#calendar div.calendar-day div.calendar-events {
+	padding: 5px;
+	min-height: 360px;
+    overflow: hidden;
+}
+
+div#calendar a.calendar-day-label {
+	float: left; 
+	background-color: #c60; 
+	color: white; 
+	font-weight: bold; 
+	padding: 5px; 
+	margin: 5px 10px 5px 0;
+	text-decoration:none;
+	text-align: center;
+}
+
+/* 
+*  Calendar Event Style
+*  
+*                       
+*/
+
+.day-event-troop, .day-event-scout, .day-event-other, .day-event-camp, .day-event-district, .day-event-county,
+a.day-event-troop, a.day-event-scout, a.day-event-other, a.day-event-camp, a.day-event-district, a.day-event-county {
+	display: block;
+    font-size: 8pt;
+	margin: 1px 2px;
+    padding: 2px;
+	text-decoration: none;
+    overflow: hidden;
+    padding: 2px;
+}
+
+.day-event-troop,
+a.day-event-troop {
+    background-color: #811;
+	border: 1px solid #400;
+    color: white;
+}
+
+.day-event-scout,
+a.day-event-scout {
+    background-color: #6B00B2;
+    border: 1px solid #350056;
+    color: #FFF;
+}
+
+.day-event-camp,
+a.day-event-camp {
+    background-color: #AD3;
+    border: 1px solid #363;
+    color: #242;
+}
+
+.day-event-district,
+a.day-event-district {
+    background-color: #111;
+	border: 1px solid #333;
+    color: white;
+}
+
+.day-event-county,
+a.day-event-county {
+    background-color: #F11;
+	border: 1px solid #633;
+    color: white;
+}
+
+.day-event-other,
+a.day-event-other {
+    background-color: #FF6;
+    border: 1px solid #993;
+    color: #333;
+}
+
+.event-troop, .event-scout, .event-other, .event-camp, .event-district, .event-county,
+a.event-troop, a.event-scout, a.event-other, a.event-camp, a.event-district, a.event-county {
+	display: block;
+    text-decoration: none; 
+    font-size: 8pt;
+    overflow: hidden;
+    padding: 2px;
+}
+
+.event-troop,
+a.event-troop {
+    color: maroon;
+}
+
+.event-scout,
+a.event-scout {
+    color: #57068C;
+}
+
+.event-camp,
+a.event-camp {
+    color: #090;
+}
+
+.event-district,
+a.event-district {
+    color: #111;
+}
+
+.event-county,
+a.event-county {
+    color: #F00;
+}
+
+.event-other,
+a.event-other {
+    color: #AA0;
+}
+
+a.event-troop span.ev-tm, 
+a.event-scout span.ev-tm, 
+a.event-camp span.ev-tm, 
+a.event-other span.ev-tm, 
+a.event-district span.ev-tm, 
+a.event-county span.ev-tm {
+    font-size: 7pt;
+    font-weight: bold;
+}

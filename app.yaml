@@ -1,19 +1,45 @@
 application: 15thdoverscoutscdn
-version: 1
+version: 2
 runtime: python
 api_version: 1
 
-default_expiration: 7d
+default_expiration: 30d
 
 handlers:
 - url: /stylesheets
-  static_dir: stylesheets
+  static_dir: css
+  http_headers:
+    Access-Control-Allow-Origin: http://15thdoverscouts.org.uk
+
+- url: /css
+  static_dir: css
+  http_headers:
+    Access-Control-Allow-Origin: http://15thdoverscouts.org.uk
 
 - url: /images
-  static_dir: images
-  
+  static_dir: img
+
+- url: /img
+  static_dir: img
+
 - url: /js
   static_dir: js
+  http_headers:
+    Access-Control-Allow-Origin: http://15thdoverscouts.org.uk
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+
+- url: /gallery.*
+  script: photoprocess.py
+
+- url: /auth.*
+  script: auth.py
+
+- url: /crossdomain.xml
+  static_files: crossdomain.xml
+  upload: crossdomain.xml
 
 - url: /.*
   static_files: index.html

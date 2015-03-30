@@ -1,0 +1,18 @@
+<script>
+{% if callback %}
+if(typeof window.opener['{{ callback }}']){
+	window.opener['{{ callback }}']();
+	window.close();
+}else{
+	window.location.pathname = "{{ redirect }}";
+}
+{% else %}
+if(window.name == "oauth_popup"){
+	window.opener.location.reload();
+	window.close();
+}else{
+	window.location.pathname = "{{ redirect }}";
+}
+{% endif %}
+</script>
+<p>Click <a href="{{ redirect }}">here</a> to return to the gallery.</p>
